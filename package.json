@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "eslint": "npx eslint \"src/**/*.ts\"",
+    "stylelint": "npx stylelint \"src/**/*.scss\"",
+    "lint": "npm run eslint && npm run stylelint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "gh-pages": "^6.1.1",
+    "sass": "^1.72.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "typescript": "^5.4.3",
+    "typescript-eslint": "^7.3.1",
+    "vite": "^5.2.4",
+    "vite-plugin-static-copy": "^1.0.1"
+  },
+  "private": true,
+  "type": "module"
+}
