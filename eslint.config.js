@@ -3,15 +3,20 @@ import prettierRecommended from "eslint-plugin-prettier/recommended";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  eslint.configs.all,
-  ...tseslint.configs.all,
+  eslint.configs.recommended,
+  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   {
     languageOptions: {
       parserOptions: {
         project: true,
-        tsconfigRootDir: import.meta.dirname
-      }
-    }
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
   },
-  prettierRecommended
+  {
+    files: ["*.js"],
+    ...tseslint.configs.disableTypeChecked,
+  },
+  prettierRecommended,
 );

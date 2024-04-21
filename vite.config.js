@@ -7,32 +7,32 @@ export default {
   publicDir: false,
   build: {
     outDir: "../build",
-    emptyOutDir: true
+    emptyOutDir: true,
   },
   plugins: [
     ViteImageOptimizer({
       png: {
-        quality: 90
+        quality: 90,
       },
       jpeg: {
-        quality: 90
+        quality: 90,
       },
       webp: {
         lossless: false,
-        quality: 90
+        quality: 90,
       },
       avif: {
         lossless: false,
-        quality: 90
-      }
+        quality: 90,
+      },
     }),
     viteStaticCopy({
       targets: [
         {
           src: "CNAME",
-          dest: "."
-        }
-      ]
-    })
-  ]
+          dest: ".",
+        },
+      ],
+    }),
+  ],
 };
