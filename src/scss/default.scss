@@ -20,7 +20,7 @@ body {
   margin: 0;
   padding: 2rem;
 
-  @media screen and (min-width: 1000px) {
+  @media (width >= 1000px) {
     align-items: initial;
     flex-direction: row;
   }
