@@ -32,6 +32,14 @@ export default {
           src: "CNAME",
           dest: ".",
         },
+        {
+          src: "robots.txt",
+          dest: ".",
+        },
+        {
+          src: "sitemap.xml",
+          dest: ".",
+        },
       ],
     }),
   ],
