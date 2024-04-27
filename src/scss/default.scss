@@ -73,13 +73,34 @@ main {
       text-align: center;
     }
 
-    &.about p {
-      hyphens: auto;
-      margin: 0 0 1rem;
-      text-align: justify;
+    &.about {
+      p {
+        hyphens: auto;
+        margin: 0 0 1rem;
+        text-align: justify;
 
-      &:last-child {
-        margin-bottom: 0;
+        &:last-of-type {
+          margin-bottom: 2rem;
+        }
+      }
+
+      nav ul {
+        column-gap: 0.25rem;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+          display: block;
+
+          img {
+            display: block;
+            height: 28px;
+            width: 95.5px;
+          }
+        }
       }
     }
 
